@@ -4,7 +4,11 @@ import numpy as np
 from utils.text_utils import clean_text
 
 # Configuring Gemini API key
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+import os
+import google.generativeai as genai
+
+api_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=api_key)
 
 # Initializing the Gemini model
 model = genai.GenerativeModel("gemini-2.5-flash")
