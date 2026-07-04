@@ -4,7 +4,8 @@ import re
 import json
 
 # Configure Gemini API key
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+import os
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def gemini_generate(prompt, temp=0.5):
     """Writing a function that takes a prompt and generates a response using google ai"""
