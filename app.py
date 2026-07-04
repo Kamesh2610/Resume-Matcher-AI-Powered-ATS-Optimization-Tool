@@ -366,3 +366,4 @@ if resume_text and job_description:
 
 else:
     st.info("Please upload a resume and paste a job description above to generate results.")
+    
